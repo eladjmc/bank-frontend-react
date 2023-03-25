@@ -39,6 +39,9 @@ The back-end of the app is built using Express and MongoDB. The main components 
 - `routes`: This directory contains the Express route handlers for the API endpoints.
 - `config`: This directory contains the configuration files for the database and server.
 
+### `Backend repo link`
+[Backend Repo](https://github.com/eladjmc/bank-backend-express)
+
 ## Database
 
 The database for the app is MongoDB, which is hosted on the cloud MongoDB Atlas service. The Mongoose library is used to interact with the database. The database has two collections:
@@ -47,6 +50,7 @@ The database for the app is MongoDB, which is hosted on the cloud MongoDB Atlas 
 - `accounts`: This collection stores information about the bank accounts, such as balance and account type.
 
 ### App demo link:
+
 [Bank Manager](https://elad-bank-fullstack.netlify.app/)
 
 
