@@ -1,46 +1,53 @@
-# Getting Started with Create React App
+# Bank Account Manager Demo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a demo project for managing bank users and accounts. It is built using the MERN stack, with a React front-end and an Express back-end.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+To install the project dependencies, run the following commands in both the `client` and `server` directories:
 
-### `npm start`
+```
+> npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+To start the development server for the client and server, run the following command in the project root directory:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm run dev
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will start the React development server on port 3000 and the Express server on port 5000.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Front-End
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The front-end of the app is built using React and TypeScript. The main components of the front-end are:
 
-### `npm run eject`
+- `App.tsx`: This is the root component of the app, which contains the main navigation and routing logic.
+- `components`: This directory contains the individual components used to build the pages of the app.
+- `pages`: This directory contains the pages of the app, which are made up of one or more components.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Back-End
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The back-end of the app is built using Express and MongoDB. The main components of the back-end are:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `app.js`: This is the main Express application file, which contains the server configuration and routing logic.
+- `models`: This directory contains the Mongoose models for the database collections.
+- `routes`: This directory contains the Express route handlers for the API endpoints.
+- `config`: This directory contains the configuration files for the database and server.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Database
 
-## Learn More
+The database for the app is MongoDB, which is hosted on the cloud MongoDB Atlas service. The Mongoose library is used to interact with the database. The database has two collections:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- `users`: This collection stores information about the bank users, such as name and email address.
+- `accounts`: This collection stores information about the bank accounts, such as balance and account type.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### App demo link:
+[Bank Manager](https://elad-bank-fullstack.netlify.app/)
+
+
+
