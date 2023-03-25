@@ -1,0 +1,64 @@
+.add-user-page {
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  align-items: center;
+
+  h1 {
+    color: #f26522;
+  }
+  form {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.103);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    border-radius: 10px;
+    gap: 4px;
+    padding: 12px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+    .button1 {
+      cursor: pointer;
+      display: inline-block;
+      padding: 0.35em 1.2em;
+      border: 0.1em solid #ffffff;
+      margin: 0 0.3em 0.3em 0;
+      margin-top: 10px;
+      border-radius: 0.12em;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      color: #000000;
+      background-color: #ffffff;
+      text-align: center;
+      transition: all 0.2s;
+    }
+    .button1:hover {
+      color: #ffffff;
+      background-color: #f26522;
+    }
+  }
+}
+
+
+
+.input {
+
+padding-left: 8px;
+border-radius: 10px;
+border: none;
+height: 24px;
+
+
+}
+.input:focus {
+    border:none;
+    outline: #f26522 solid 2px;
+}

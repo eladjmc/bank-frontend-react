@@ -90,12 +90,14 @@ const UpdateCashPage = ({ isAdding, isCash }: Props) => {
         <div className="form-container">
           <span>Amount:</span>
           <input
+          className="input"
             type="number"
             value={amount}
             onChange={(e: ChangeEvent<HTMLInputElement>) =>
               handleChangeInput(e.target.value)
             }
           />
+          <span>Account:</span>
           <select
             name="account"
             id="account"
@@ -110,7 +112,7 @@ const UpdateCashPage = ({ isAdding, isCash }: Props) => {
               </option>
             ))}
           </select>
-          <button onClick={handleSubmitForm}>Submit</button>
+          <button className="button1" onClick={handleSubmitForm}>Submit</button>
         </div>
       )}
       {isLoading && <h2>Loading...</h2>}

@@ -2,5 +2,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-top: 50px;
 }
+
+
+
+a.button1 {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #ffffff;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  a.button1:hover {
+    color: #000000;
+    background-color: #ffffff;
+  }
+  
+  
+  
+  .user-actions-container {
+      margin-top: 35px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+  
+    }
+    h3 {
+        font-size: 24px;
+        color: #f26522;
+        font-weight: 400;
+        margin-bottom: 10px;
+    }
+  
+  .btn-container {
+      gap: 10px;
+      display: flex;
+      flex-direction: column;
+      
+  }

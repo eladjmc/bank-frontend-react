@@ -94,6 +94,7 @@ const TransferCashPage = () => {
         <div className="form-container">
           <span>Amount:</span>
           <input
+          className='input'
             type="number"
             min={0}
             value={amount}
@@ -101,7 +102,7 @@ const TransferCashPage = () => {
               handleChangeInput(e.target.value)
             }
           />
-          <label htmlFor='account'>Account:</label>
+          <span >Account:</span>
           <select
             name="account"
             id="account"
@@ -116,21 +117,20 @@ const TransferCashPage = () => {
               </option>
             ))}
           </select>
-          <button onClick={handleSubmitForm}>Transfer</button>
+          <button className='button1' onClick={handleSubmitForm}>Transfer</button>
         </div>
       )}
       {!receiver && !receiverAccount && <div className='receiver-form'>
-        <h3>Transfer to:</h3>
-        <label htmlFor="receiver-passport"></label>
-        <input onChange={(e: ChangeEvent<HTMLInputElement>)=>setReceiverPassport(e.target.value)} id="receiver-passport" name='receiver-passport' type="text" />
-        <button onClick={handleGetReceiver} >Submit</button>
+        <span>Transfer to:</span>
+        <input className='input' onChange={(e: ChangeEvent<HTMLInputElement>)=>setReceiverPassport(e.target.value)} id="receiver-passport" name='receiver-passport' type="text" />
+        <button className='button1' onClick={handleGetReceiver} >Submit</button>
         </div>}
         {receiver && !receiverAccount && <>
-        <h3>Choose Receiver Account</h3>
+        <span className='sender-span'>Choose Receiver Account</span>
             <select
             name="receiver-account"
             id="receiver-account"
-            value={accountIndex}
+            value={receiverAccountIndex}
             onChange={(e: ChangeEvent<HTMLSelectElement>) =>
               setReceiverAccountIndex(parseInt(e.target.value))
             }
@@ -141,7 +141,7 @@ const TransferCashPage = () => {
               </option>
             ))}
           </select>
-          <button onClick={()=>setReceiverAccount(receiver.accounts[receiverAccountIndex])}>Submit</button>
+          <button className='button1' onClick={()=>setReceiverAccount(receiver.accounts[receiverAccountIndex])}>Submit</button>
           </>
         }
       {isLoading && <h2>Loading...</h2>}

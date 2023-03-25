@@ -6,4 +6,5 @@ export enum Pages {
     withdrawCash = 'user/withdraw-cash',
     updateCredit = 'user/change-credit',
     transferCash = 'user/transfer-cash',
+    addUser = 'actions/add-user',
 }
