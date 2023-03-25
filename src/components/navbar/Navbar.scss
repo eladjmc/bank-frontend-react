@@ -1,0 +1,15 @@
+.home-button-navbar {
+    position: relative;
+}
+.lol {
+    position: absolute;
+    font-size: 40px;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+.lol:hover {
+    color: #f26522;
+    transform: scale(.8);
+}

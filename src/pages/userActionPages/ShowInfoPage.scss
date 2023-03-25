@@ -1,0 +1,21 @@
+.user-info-page {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.user-info-container {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.field-value {
+    color: #f26522;
+    font-weight: 400;
+}
