@@ -135,7 +135,7 @@ const TransferCashPage = () => {
               setReceiverAccountIndex(parseInt(e.target.value))
             }
           >
-            {user.accounts.map((account, index) => (
+            {receiver.accounts.map((account, index) => (
               <option key={index} value={index}>
                 {index + 1}
               </option>

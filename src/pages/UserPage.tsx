@@ -10,6 +10,9 @@ const UserPage = () => {
   const [userId, setUserId] = useState<string>("");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [userName, setUserName] = useState<string>("");
+  const [currentUserPassport, setCurrentUserPassport] = useState<string>("");
+  
+  const [message, setMessage] = useState<string>("");
 
   const navigate = useNavigate();
 
@@ -17,8 +20,38 @@ const UserPage = () => {
     navigate(`/${page}/${userId}`);
   };
 
+  const handleDeleteUser = async () => {
+    try {
+      setIsLoading(true);
+      const result = await API.delete(`/users/${userId}`)
+      setCurrentUserPassport("");
+      setUserId("");
+      setPassportInput("");
+      setMessage(result.data.data)
+      setUserName("");
+      setIsLoading(false);
+    } catch (error) {
+      setMessage("Error - User Could not be deleted")
+      setIsLoading(false);
+    }
+  }
+
+  const handleAddAccount = async () => {
+    try {
+      setIsLoading(true);
+      const result = await API.post(`/accounts`,{passportID: currentUserPassport})
+      setMessage(result.data.data)
+      setIsLoading(false);
+    } catch (error) {
+      setMessage("Error - Account can't be added")
+      setIsLoading(false);
+    }
+  }
+ 
   const handleGetUser = async () => {
     try {
+      setCurrentUserPassport("");
+      setMessage("");
       setUserName("");
       setUserId("");
       setIsLoading(true);
@@ -28,6 +61,7 @@ const UserPage = () => {
       const data = result.data.data[0];
       setUserId(data.id);
       setUserName(data.name);
+      setCurrentUserPassport(passportInput);
       setIsLoading(false);
     } catch (error) {
       setUserName("User Does Not Exist");
@@ -81,14 +115,15 @@ const UserPage = () => {
             <a onClick={()=>handleRedirectToPage(Pages.transferCash)} className="button1">
               Transfer Cash
             </a>
-            <a  className="button1">
+            <a onClick={handleAddAccount}  className="button1">
               Add Account
             </a>
-            <a  className="button1">
+            <a onClick={handleDeleteUser} className="button1">
               Delete User
             </a>
           </div>
         )}
+        <h3>{message}</h3>
       </div>
     </section>
   );
