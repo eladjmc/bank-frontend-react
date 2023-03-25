@@ -69,22 +69,22 @@ const UserPage = () => {
             <a onClick={()=>handleRedirectToPage(Pages.getInfo)} className="button1">
               User Information
             </a>
-            <a href="something" className="button1">
+            <a onClick={()=>handleRedirectToPage(Pages.depositCash)}  className="button1">
               Deposit Cash
             </a>
-            <a href="something" className="button1">
+            <a onClick={()=>handleRedirectToPage(Pages.withdrawCash)} className="button1">
               Withdraw Cash
             </a>
-            <a href="something" className="button1">
+            <a onClick={()=>handleRedirectToPage(Pages.updateCredit)} className="button1">
               Update Credit
             </a>
-            <a href="something" className="button1">
+            <a  className="button1">
               Transfer Cash
             </a>
-            <a href="something" className="button1">
+            <a  className="button1">
               Add Account
             </a>
-            <a href="something" className="button1">
+            <a  className="button1">
               Delete User
             </a>
           </div>

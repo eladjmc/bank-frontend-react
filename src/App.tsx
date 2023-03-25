@@ -6,6 +6,7 @@ import Welcome from './pages/WelcomePage';
 import Navbar from './components/navbar/Navbar';
 import User from './pages/UserPage';
 import ShowInfoPage from './pages/userActionPages/ShowInfoPage';
+import UpdateCashPage from './pages/userActionPages/UpdateCashPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -16,8 +17,9 @@ function App() {
         { path: "/", element: <Welcome /> },
         { path: "/user", element: <User /> },
         { path: "/user/getinfo/:id", element: <ShowInfoPage /> },
-        { path: "/user/changecash/:id", element: <User /> },
-        { path: "/user/changecredit/:id", element: <User /> },
+        { path: "/user/deposit-cash/:id", element: <UpdateCashPage isCash={true} isAdding={true} /> },
+        { path: "/user/withdraw-cash/:id", element: <UpdateCashPage isCash={true} isAdding={false} /> },
+        { path: "/user/change-credit/:id", element: <UpdateCashPage isCash={false} isAdding={true} /> },
         { path: "/user/transfercash/:id", element: <User /> },
         { path: "/user/deleteaccount/:id", element: <User /> },
         { path: "*", element: <Error /> }

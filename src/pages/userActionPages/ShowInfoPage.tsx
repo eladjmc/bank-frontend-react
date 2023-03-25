@@ -5,13 +5,12 @@ import "./ShowInfoPage.scss";
 
 const ShowInfoPage = () => {
   const { id } = useParams();
+
   const [user, setUser] = useState<any>({});
   const [isLoading, setIsLoading] = useState(true);
 
   const getUser = async () => {
     try {
-      console.log(id);
-
       setIsLoading(true);
       const result = await API.get(`/users/${id}`);
       setUser(result.data.data);
@@ -47,7 +46,7 @@ const ShowInfoPage = () => {
           </h3>
           <h3>
             Total amount of credit:{" "}
-            <span className="field-value">{user.totalCash}</span>
+            <span className="field-value">{user.totalCredit}</span>
           </h3>
           <h3>
             Total amount of accounts:{" "}
