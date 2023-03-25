@@ -8,17 +8,18 @@ interface Props {
   isCash: boolean;
 }
 
-type AccountData = {
+export type AccountData = {
   _id: string;
   credit: number;
   cash: number;
 };
 
-interface User {
+export interface User {
+  _id?: string;
   accounts: AccountData[];
 }
 
-interface Account {
+export interface Account {
   id: number;
   name: string;
 }
@@ -56,15 +57,7 @@ const UpdateCashPage = ({ isAdding, isCash }: Props) => {
   }, []);
 
   const handleChangeInput = (amount: string) => {
-    if (isNaN(parseInt(amount))) {
-      setAmount(0);
-    }
-
-    if (!isCash && parseInt(amount) < 0) {
-      setAmount(0);
-    } else {
       setAmount(parseInt(amount));
-    }
   };
 
   const handleSubmitForm = async () => {
@@ -75,7 +68,8 @@ const UpdateCashPage = ({ isAdding, isCash }: Props) => {
     try {
       setIsLoading(true);
       setMsg("");
-      await API.put(`/accounts/updateBalance/${accountId}`, moneyToUpdate);
+      const result = await API.put(`/accounts/updateBalance/${accountId}`, moneyToUpdate);
+      setMsg(result.data.data)
       setIsLoading(false);
     } catch (error: any) {
       if (error.response) {

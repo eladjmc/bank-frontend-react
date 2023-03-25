@@ -78,7 +78,7 @@ const UserPage = () => {
             <a onClick={()=>handleRedirectToPage(Pages.updateCredit)} className="button1">
               Update Credit
             </a>
-            <a  className="button1">
+            <a onClick={()=>handleRedirectToPage(Pages.transferCash)} className="button1">
               Transfer Cash
             </a>
             <a  className="button1">
