@@ -13,10 +13,10 @@ To install the project dependencies, run the following commands in both the `cli
 
 ## Usage
 
-To start the development server for the client and server, run the following command in the project root directory:
+To start the development server for the client run the following command in the project root directory:
 
 ```
-npm run dev
+npm start
 ```
 
 
@@ -30,6 +30,18 @@ The front-end of the app is built using React and TypeScript. The main component
 - `components`: This directory contains the individual components used to build the pages of the app.
 - `pages`: This directory contains the pages of the app, which are made up of one or more components.
 
+
+## Screenshots
+
+![plot](./screenshots/screenshot0.png) 
+
+
+![plot](./screenshots/screenshot1.png) 
+
+
+![plot](./screenshots/screenshot2.png) 
+
+<br>
 ## Back-End
 
 The back-end of the app is built using Express and MongoDB. The main components of the back-end are:
