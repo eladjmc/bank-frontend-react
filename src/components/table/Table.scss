@@ -58,8 +58,9 @@ h1{
 @media (max-width: 767px) {
     .fl-table {
         display: block;
-        width: 100%;
+        width: calc(100% - 12px);
         margin-top: 33px;
+        margin-left: 6px;
     }
     .table-wrapper:before{
         content: "Scroll horizontally >";
