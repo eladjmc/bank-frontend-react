@@ -20,7 +20,7 @@ npm start
 ```
 
 
-This will start the React development server on port 3000 and the Express server on port 5000.
+This will start the React development server on port 3000.
 
 ## Front-End
 
